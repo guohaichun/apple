@@ -1,0 +1,92 @@
+@import "var.less";
+//@color:red;
+//.radius(@r1:50%,@r2:50%,@r3:50%,@r4:50%){
+// -webkit-border-radius:@arguments;
+//  -o-border-radius:@arguments;
+//  -moz-border-radius:@arguments;
+//  -ms-border-radius:@arguments;
+//  border-radius:@arguments;
+//}
+//div{
+//  width: @width;
+//  height:@height;
+//  border:1px solid red;
+//
+//}
+//.shadow(@type) when (@type=1) {
+//  -moz-box-shadow:0 0 10px red inset;
+//  -o-box-shadow:0 0 10px red inset;
+//  -webkit-box-shadow:0 0 10px red inset;
+//  -ms-box-shadow:0 0  10px red inset;
+//  box-shadow:0 0 10px red inset;
+//}
+//.one{
+//  width: @width;
+//  height:@height;
+//  border: 1px solid red;
+//  border-image-source: url(../xingxing.jpg);
+//  border-image-width: 10px 20px;
+//  border-image-slice:20%;
+//  border-image-repeat:stretch;
+//  border-image-outset:10px;
+//}
+*{
+  box-sizing: border-box;
+}
+
+//中屏
+@media screen and(min-width:@num1){
+  &{
+    width:@num1;
+    margin:auto;
+  }
+ .loop(m);
+}
+//大屏
+@media screen and(min-width:@num2){
+  &{
+    width:@num2;
+    margin:auto;
+  }
+  .loop(l);
+}
+//小屏幕
+.container{
+  &{
+    width:@num1*-@minWidth;
+    margin:0 auto;
+  }
+  &>.row{
+    width:100%;
+    .clear;
+  }
+  &-fluid{
+    width:100%;
+  }
+}
+//栅格化的核心代码
+.loop(@type:s,@i:1) when (@i<=@cols){
+  .container>.row>col-@{type}-@{i}{
+    float:left;
+    width:@i/@cols*100%;
+  }
+  .container-fluid>.row>col-@{type}-@{i}{
+    float:left;
+    width:@i/@cols*100%;
+  }
+  .loop(@type,@i+1);
+}
+//最小屏
+.loop();
+//清除浮动
+.clear(){
+  &:before,&:after{
+    content:"";
+    display: block;
+  }
+  &:after{
+    clear:both;
+  }
+}
+
+

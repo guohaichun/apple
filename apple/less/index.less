@@ -1,0 +1,1027 @@
+@import "index-var.less";
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	list-style: none;
+	text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    border-top: 1px solid transparent;
+    margin-top: -1px;
+    position: relative;
+
+}
+ul{
+	list-style:none;
+}
+li{
+	list-style: none;
+}
+h1,h2{
+    margin:0;
+    padding:0;
+    border:0;
+    list-style:none;
+    text-decoration:none;
+    font-weight: normal;
+    font-style:normal;
+}
+*{
+    box-sizing: border-box;
+}
+.apple_header{
+    width:100%;
+    height:40px;
+    background: #444;
+    line-height: 1;
+    margin:0 auto;
+}
+.apple_adv_text{
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: right;
+    margin: 0 auto;
+
+}
+.apple_adv .apple_adv_text{
+    font-size:1px;
+    color:#fff;
+}
+.nav_box{
+    height:44px;
+    background:#010101;
+    overflow: hidden;
+    opacity:0.8;
+}
+.clear(){
+    &:before,&:after{
+        content: "";
+        display: block;
+    }
+    &:after{
+        clear:both;
+    }
+}
+.loop(@type:m,@i:1) when (@i<=@cols){
+    .col-@{type}-@{i}{
+        width:@i/@cols*100%;
+    }
+    .loop(@type,@i+1);
+}
+//最小屏
+.loop();
+.col-m-hide{
+    display: block;
+}
+.col-c-hide{
+    display: none;
+}
+.col-l-hide{
+    display: none;
+}
+.nav{
+    width:100%;
+    height:48px;
+    font-size:16px;
+    font-weight:400;
+    line-height:44px;
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    margin:0 auto;
+}
+.nav .nav_meaue{
+    width:48px;
+    height:48px;
+    text-align:center;
+    position: relative;z-index:10;
+
+}
+.nav .nav_meaue .hg{
+    width:17px;
+    height:1px;
+    background-color:#ffffff;
+    position: absolute;
+    margin-top:40%;
+}
+.nav .nav_meaue .gh{
+    width:17px;
+    height:1px;
+    background-color:#ffffff;
+    position: absolute;
+    margin-top:55%;
+}
+.meaue_box{
+    width:100%;
+    height:100%;
+    background:#000000;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    display: block;
+
+}
+.apple_meaue{
+    position: absolute;
+    z-index: 1002;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 48px;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.meaue_box li{
+    height: 47px;
+    border-bottom: 1px solid #333;
+}
+.meaue_box li a{
+    font-size: 20px;
+    line-height: 2.35;
+    letter-spacing: normal;
+    background-size: contain;
+}
+.apple_login_img{
+    width:100%;
+    height:48px;
+    background-image:url(../img/image_large.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+    float:left;
+    text-align: center;
+}
+.nav .nav_first{
+    position:absolute;
+    left:50%;
+}
+.nav .nav_last1{
+    position:absolute;
+    right:16px;
+}
+.nav li{
+    height:100%;
+    float:left;
+    padding:0 10px;
+}
+.nav a{
+    color:#fff;
+}
+.banner{
+    height:540px;
+    overflow: hidden;
+    position:relative;
+    display:block;
+}
+//.imgs{
+//    width:100%;
+//    height:100%;
+//}
+//.imgs a{
+//    width:100%;
+//    height:100%;
+//    display:block;
+//}
+//.imgs_1{
+//    background:url("../img/event_small.jpg") no-repeat 50% 22%;
+//    background-size:cover;
+//}
+.smallbanner{
+    width:100%;
+    overflow: hidden;
+
+}
+.smallbanner li{
+    border: 1px solid #fff;
+    float:left;
+    height:200px;
+    .clear();
+}
+.smallbanner li a{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.smimgs1{
+    background:url("../img/nike_watch_small.jpg") no-repeat center center;
+}
+.smimgs2{
+    background:url("../img/airpods_small.jpg") no-repeat center center;
+}
+.smimgs3{
+    background:url("../img/iphone_upgrade_small.jpg") no-repeat center center;
+}
+.smimgs4{
+    background:url("../img/accessibility_small.jpg") no-repeat center center;
+}
+    .drectory{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        padding-top: 20px;
+
+    }
+    .drectory_colmun{
+        width:100%;
+        height:auto;
+    }
+    .colmun_title{
+        width:100%;
+        font-size: 12px;
+        line-height: 1.66667;
+        font-weight: 600;
+        letter-spacing: normal;
+        color: #333;
+        border-bottom:1px solid #dfdfdf;
+
+    }
+    .colmun_xuan{
+       height:38px;
+       float:right;
+       margin-right:40px;
+       cursor: pointer;
+    }
+   .colmun_jian{
+       height:38px;
+       float:right;
+       margin-right:40px;
+       display:none;
+   }
+    .colmun_ul{
+        margin-right:20px;
+        display: none;
+    }
+    .colmun_ul:hover{
+        display: block;
+    }
+    .colmun_ul li{
+        height:20px;
+    }
+    .colmun_ul li a{
+        color: #333;
+        font-size: 10px;
+        text-decoration:none;
+    }
+    .colmun_ul li a:hover{
+          text-decoration:underline;
+    }
+    .drectory_colmun{
+        padding-top:20px;
+    }
+    .drectory_one{
+        width:176px;
+        height:auto;
+
+    }
+.banner{
+    height:580px;width:100%;position: relative;overflow: hidden;
+
+}
+.box{
+    width:100%;height:100%;position: relative;
+}
+.box .list{
+    position: absolute;
+    width:100%;height:100%;
+}
+.box .one{
+    background:#fff url(../img/pro_s.jpg) no-repeat;
+    background-size: contain;  background-position: center bottom;
+
+}
+.box .three{
+    background:#000 url(../img/kk_s.jpg) no-repeat;
+    background-size: cover;  background-position: center bottom;
+    left:100%;
+}
+.box .two{
+    background:#000 url(../img/iphone.jpg) no-repeat;
+    background-size: contain;  background-position: center bottom;
+    left:100%;
+}
+.leftBtn{
+    position: absolute;
+    top:0;bottom: 0;
+    left:20px;margin:auto;
+    width:60px;height:60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    background:#ccc;
+    opacity: 0;
+    transition:opacity .5s linear;
+}
+.rightBtn{
+    position: absolute;
+    top:0;bottom: 0;
+    right:20px;margin:auto;
+    width:60px;height:60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    background:#ccc;
+    opacity: 0;
+    transition:opacity .5s linear;
+}
+.left{
+    height:100%;width:25%;
+    position: absolute;left:0;top:0;
+    z-index:1000;
+
+}
+.left:hover >.leftBtn{
+    opacity: 1;
+}
+.right:hover>.rightBtn{
+    opacity: 1;
+}
+.right{
+    height:100%;width:25%;
+    position: absolute;right:0;top:0;
+    z-index:1000;
+
+}
+
+.btns{
+    width:170px;height:10px;
+    position: absolute;
+    left:0;right:0;bottom: 50px;
+    margin:auto;z-index:999;
+
+}
+.btns .btns-list{
+    float:left;width:50px;height:4px;
+    margin-right:10px;
+    border:1px solid #ccc;
+    position: relative;
+}
+.btns .btns-list:last-child{
+    margin:0;
+}
+.btns .progress{
+    height:100%;background:#dfdfdf;
+    width:0%;
+}
+//.img-list div[class*=col]{
+//    height:200px;
+//    border:2px solid #fff;
+//    background: url(../img/event_large.jpg) no-repeat;
+//    background-size: cover;
+//}
+
+.drectory_two{
+        width:auto;
+        height:auto;
+        margin-top:20px;
+    }
+.footer{
+    width:100%;
+    height:96px;
+    margin:0 auto;
+    margin-top:20px;
+
+}
+.footer_shop{
+    width:980px;
+    height:25px;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #e3e3e3;
+    text-decoration: none;
+    padding:0;
+}
+.footer_zg{
+    width:100%;
+    height:20px;
+    float: right;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    line-height:20px;
+    margin-top:5px;
+}
+.footer_zg .zg_tu{
+    background-size: 16px 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image:url("../img/16.png");
+    background-repeat: no-repeat;
+    padding-right: 5px;
+    background-position: left center;
+    cursor: pointer;
+    float: left;
+    margin-top: 1px
+}
+.legal{
+    width:100%;
+    height:20px;
+    margin-top:5px;
+
+}
+.legal-copyright{
+    margin-right: 26px;
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+.legal_links{
+    height:20px;
+    float:left;
+    margin-right: 26px;
+    text-align: center;
+    line-height:20px;
+
+}
+.legal_links a{
+    height:14px;
+    float:left;
+    text-align: center;
+    line-height:14px;
+
+}
+.legal_link{
+    height:14px;
+    float:left;
+    text-align: center;
+    border-right: 1px solid #d6d6d6;
+    margin-right: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size:12px;
+    color:#333;
+}
+.footer_p{
+    width:100%;
+    height:20px;
+    font-size: 12px;
+    color:#666;
+    float:left;
+    margin-top:5px;
+
+}
+
+.apple_floot{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.apple_sav_content{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    margin-left:20px;
+
+}
+.sosumi{
+    width:100%;
+    height:47px;
+    margin:0 auto;
+    border-bottom: 1px solid #e3e3e3;
+
+}
+.sosumi ul li{
+    width:980px;
+    height:20px;
+    font-size: 12px;
+    color: #999;
+    float: left;
+    margin-top:14px;
+    line-height: 1.33333;
+    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+}
+
+//中屏
+@media screen and (min-width: @monWidth){
+    .nav .nav_first{
+        display:none;
+    }
+    .nav li{
+        margin-right:4%;
+    }
+    .imgs_1{
+        background:url("../img/event_medium.jpg") no-repeat 50% 38%;
+        background-size:cover;
+    }
+    .nav .nav_meaue{
+        display: none;
+    }
+    .nav .nav_last{
+        margin-right:0;
+    }
+    .nav .nav_last1{
+        display:none;
+    }
+    .smimgs1{
+        background:url("../img/nike_watch_medium.jpg") no-repeat center center;
+    }
+    .smimgs2{
+        background:url("../img/airpods_medium.jpg") no-repeat center center;
+    }
+    .smimgs3{
+        background:url("../img/iphone_upgrade_medium.jpg") no-repeat center center;
+    }
+    .smimgs4{
+        background:url("../img/accessibility_medium.jpg") no-repeat center center;
+    }
+    .loop(c);
+    .col-m-hide{
+        display: block;
+    }
+    .col-c-hide{
+        display: block;
+    }
+    .col-l-hide{
+        display: none;
+    }
+    .meaue_box{
+        width:100%;
+        height:100%;
+        background:#000000;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:999;
+        display: none;
+    }
+    .box .one{
+        background:#fff url(../img/pro_m.jpg) no-repeat;
+        background-size: contain;  background-position: center bottom;
+
+    }
+    .box .three{
+        background:#000 url(../img/kk_m.jpg) no-repeat;
+        background-size: cover;  background-position: center bottom;
+        left:100%;
+    }
+    .box .two{
+        background:#000 url(../img/iphone.jpg) no-repeat;
+        background-size: contain;  background-position: center bottom;
+        left:100%;
+    }
+    //中屏footer
+    .drectory{
+        width:100%;
+        height:240px;
+        margin:0 auto;
+        margin-left:20px;
+
+    }
+    .drectory_colmun{
+        width:20%;
+        height:auto;
+        margin-top:-20px;
+    }
+    .colmun_title{
+        font-size: 12px;
+        line-height: 1.66667;
+        font-weight: 600;
+        letter-spacing: normal;
+        color: #333;
+        border:none;
+
+    }
+    .colmun_ul{
+        margin-right:20px;
+        float: left;
+        display: block;
+
+    }
+    .colmun_ul li{
+        height:20px;
+    }
+    .colmun_ul li a{
+        color: #333;
+        font-size: 10px;
+        text-decoration: none;
+
+    }
+    .colmun_xuan{
+        display:none;
+    }
+    .colmun_jian{
+        display: none;
+    }
+    .drectory_colmun{
+        padding-top:20px;
+        float: left;
+    }
+    .drectory_one{
+        width:176px;
+        height:auto;
+        float:left;
+    }
+    .drectory_two{
+        width:auto;
+        height:auto;
+        float:left;
+        margin-top:20px;
+    }
+    .footer{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        margin-top:20px;
+        margin-left:20px;
+    }
+    .footer_shop{
+        width:980px;
+        height:25px;
+        font-size: 12px;
+        color: #999;
+        border-bottom: 1px solid #e3e3e3;
+        text-decoration: none;
+        padding:0;
+        margin:0 auto;
+    }
+    .footer_zg{
+        width:auto;
+        height:20px;
+        white-space: nowrap;
+        font-size: 12px;
+        color: #666;
+        float:right;
+        text-decoration: none;
+        line-height:20px;
+    }
+    .footer_zg .zg_tu{
+        background-size: 16px 16px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right:3px;
+        background-image:url("../img/16.png");
+        background-repeat: no-repeat;
+        padding-right: 5px;
+        background-position: left center;
+        cursor: pointer;
+        float: left;
+        margin-top: 1px
+    }
+    .legal{
+        width:980px;
+        height:20px;
+        margin-top:5px;
+        margin:0 auto;
+        font-family: inherit;
+
+    }
+    .legal-copyright{
+        margin-right: 26px;
+        float: left;
+        font-size: 12px;
+        color: #666;
+    }
+    .legal_links{
+        height:20px;
+        float:left;
+        margin-right: 26px;
+        text-align: center;
+        line-height:20px;
+
+
+    }
+    .legal_links a{
+        height:14px;
+        float:left;
+        text-align: center;
+        line-height:20px;
+
+    }
+    .legal_link{
+        height:14px;
+        float:left;
+        text-align: center;
+        border-right: 1px solid #d6d6d6;
+        margin-right: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-decoration: none;
+        font-size:12px;
+        color:#333;
+    }
+    .footer_p{
+        width:100%;
+        height:20px;
+        font-size: 12px;
+        color:#666;
+        margin:0 auto;
+
+    }
+    .footer_p p{
+        width:980px;
+        margin:0 auto;
+        font-family: inherit;
+    }
+
+    .apple_floot{
+        width:100%;
+        height:404px;
+        margin:0 auto;
+        background-color: #f2f2f2;
+        overflow: hidden;
+    }
+    .apple_sav_content{
+        width:100%;
+        height:384px;
+        margin:0 auto;
+
+    }
+    .sosumi{
+        width:100%;
+        height:47px;
+        margin:0 auto;
+        border-bottom: 1px solid #e3e3e3;
+
+    }
+    .sosumi ul{
+        width:980px;
+        height:20px;
+        margin:0 auto ;
+
+    }
+    .sosumi ul li{
+        width:980px;
+        height:20px;
+        font-size: 12px;
+        color: #999;
+        font-family: inherit;
+        line-height: 1.33333;
+
+    }
+
+
+}
+//大屏
+@media screen and (min-width: @width){
+    .nav{
+        width:1000px;
+    }
+    .nav li{
+        margin-right:6%;
+    }
+    .imgs_1{
+        background:url("../img/event_large.jpg") no-repeat 50% 38%;
+        background-size:cover;
+    }
+    .smimgs1{
+        background:url("../img/nike_watch_large.jpg") no-repeat center center;
+    }
+    .smimgs2{
+        background:url("../img/airpods_large.jpg") no-repeat center center;
+    }
+    .smimgs3{
+        background:url("../img/iphone_upgrade_large.jpg") no-repeat center center;
+    }
+    .smimgs4{
+        background:url("../img/accessibility_large.jpg") no-repeat center center;
+    }
+    .loop(l);
+    .col-m-hide{
+        display: block;
+    }
+    .col-c-hide{
+        display: block;
+    }
+    .col-l-hide{
+        display: block;
+    }
+    .meaue_box{
+        width:100%;
+        height:100%;
+        background:#000000;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:999;
+        display:none;
+    }
+    .box .one{
+        background:#fff url(../img/pro_large.jpg) no-repeat;
+        background-size: contain;  background-position: center bottom;
+
+    }
+    .box .three{
+        background:#000 url(../img/event_large.jpg) no-repeat;
+        background-size: cover;  background-position: center bottom;
+        left:100%;
+        width:100%;
+        height:100%;
+    }
+    .box .two{
+        background:#000 url(../img/iphone.jpg) no-repeat;
+        background-size: contain;  background-position: center bottom;
+        left:100%;
+    }
+    .drectory{
+        width:980px;
+        height:240px;
+        margin:0 auto;
+
+    }
+    .drectory_colmun{
+        width:20%;
+        height:auto;
+        margin-top:-20px
+
+
+    }
+    .colmun_title{
+        font-size: 12px;
+        line-height: 1.66667;
+        font-weight: 600;
+        letter-spacing: normal;
+        color: #333;
+        border:none;
+
+
+    }
+    .colmun_ul{
+        margin-right:20px;
+        float: left;
+        display: block;
+
+    }
+    .colmun_ul li{
+        height:20px;
+    }
+    .colmun_ul li a{
+        color: #333;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight:500;
+
+
+    }
+    .colmun_ul li a:hover{
+        text-decoration: underline;
+    }
+    .drectory_colmun{
+        padding-top:20px;
+        float: left;
+    }
+    .drectory_one{
+        width:176px;
+        height:auto;
+        float:left;
+    }
+    .drectory_two{
+        width:auto;
+        height:auto;
+        float:left;
+        margin-top:20px;
+    }
+    .footer{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        margin-top:20px;
+    }
+    .footer_shop{
+        width:980px;
+        height:25px;
+        font-size: 12px;
+        color: #999;
+        border-bottom: 1px solid #e3e3e3;
+        text-decoration: none;
+        padding:0;
+        margin:0 auto;
+    }
+    .footer_zg{
+        width:auto;
+        height:20px;
+        white-space: nowrap;
+        font-size: 12px;
+        color: #666;
+        float:right;
+        text-decoration: none;
+        line-height:20px;
+    }
+    .footer_zg .zg_tu{
+        background-size: 16px 16px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right:3px;
+        background-image:url("../img/16.png");
+        background-repeat: no-repeat;
+        padding-right: 5px;
+        background-position: left center;
+        cursor: pointer;
+        float: left;
+        margin-top: 1px
+    }
+    .legal{
+        width:980px;
+        height:20px;
+        margin-top:5px;
+        margin:0 auto;
+        font-family: inherit;
+
+    }
+    .legal-copyright{
+        margin-right: 26px;
+        float: left;
+        font-size: 12px;
+        color: #666;
+    }
+    .legal_links{
+        height:20px;
+        float:left;
+        margin-right: 26px;
+        text-align: center;
+        line-height:20px;
+
+
+    }
+    .legal_links a{
+        height:14px;
+        float:left;
+        text-align: center;
+        line-height:20px;
+
+    }
+    .legal_link{
+        height:14px;
+        float:left;
+        text-align: center;
+        border-right: 1px solid #d6d6d6;
+        margin-right: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-decoration: none;
+        font-size:12px;
+        color:#333;
+    }
+   .footer_p{
+        width:100%;
+        height:20px;
+        font-size: 12px;
+        color:#666;
+        margin:0 auto;
+
+    }
+    .footer_p p{
+        width:980px;
+        margin:0 auto;
+        font-family: inherit;
+    }
+
+    .apple_floot{
+        width:100%;
+        height:404px;
+        margin:0 auto;
+        background-color: #f2f2f2;
+        overflow: hidden;
+    }
+    .apple_sav_content{
+        width:100%;
+        height:384px;
+        margin:0 auto;
+
+    }
+    .sosumi{
+        width:100%;
+        height:47px;
+        margin:0 auto;
+        border-bottom: 1px solid #e3e3e3;
+
+    }
+    .sosumi ul{
+        width:980px;
+        height:20px;
+        margin:0 auto ;
+
+    }
+    .sosumi ul li{
+        width:980px;
+        height:20px;
+        font-size: 12px;
+        color: #999;
+        font-family: inherit;
+        line-height: 1.33333;
+
+    }
+
+}
+
